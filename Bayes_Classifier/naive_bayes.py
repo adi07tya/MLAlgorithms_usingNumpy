@@ -8,7 +8,7 @@ class Data(object):
         df = pd.read_csv('mnist_train.csv')
         data = df.values
         np.random.shuffle(data)
-        X = data[:, 1:]
+        X = data[:, 1:] / 255
         y = data[:, 0]
         if limit is not None:
             X, y = X[:limit], y[:limit]
