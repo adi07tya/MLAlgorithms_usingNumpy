@@ -1,3 +1,4 @@
+# Dataset is available at https://www.kaggle.com/oddrationale/mnist-in-csv
 import numpy as np
 import pandas as pd
 from scipy.stats import multivariate_normal as mvn
