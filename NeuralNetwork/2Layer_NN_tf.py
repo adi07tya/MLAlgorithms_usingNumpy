@@ -77,5 +77,11 @@ def neural_net():
                     sc = score(prediction, Ytest)
                     print("test_cost=%.3f,test_score=%.3f"%(test_cost,sc))
 
+                    train_cost = sess.run(cost, feed_dict={X:Xtrain, T:Ytrain_one_hot})
+                    prediction = sess.run(predict_op, feed_dict={X:Xtrain})
+                    sc = score(prediction, Ytrain)
+                    print("train_cost=%.3f,train_score=%.3f"%(train_cost,sc))
+                    print("\n")
+
 if __name__ == '__main__':
     neural_net()
